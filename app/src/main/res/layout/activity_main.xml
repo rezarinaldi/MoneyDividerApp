@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="moneyModel"
+            type="com.rezarinaldi.moneydividerapp.MoneyViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/tvOrang1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/orang1"
+            android:textSize="18dp"
+            android:textColor="@color/textPopupEditTextColor"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="32dp"/>
+
+        <EditText
+            android:id="@+id/orang1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="5dp"
+            android:text="@={moneyModel.jumlahOrang1}"
+            android:autofillHints="1234"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvOrang1"
+            app:layout_constraintTop_toBottomOf="@+id/tvOrang1" />
+
+        <TextView
+            android:id="@+id/tvOrang2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="@string/orang2"
+            android:textColor="@color/textPopupEditTextColor"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="@+id/tvOrang1"
+            app:layout_constraintTop_toBottomOf="@id/orang1" />
+
+        <EditText
+            android:id="@+id/orang2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="5dp"
+            android:text="@={moneyModel.jumlahOrang2}"
+            android:autofillHints="1234"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvOrang1"
+            app:layout_constraintTop_toBottomOf="@+id/tvOrang2" />
+
+        <Button
+            android:id="@+id/hitung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/hitung"
+            android:onClick="@{()->moneyModel.hitung()}"
+            android:background="@color/colorAccent"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/orang2" />
+
+        <TextView
+            android:id="@+id/hasil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginEnd="26dp"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/hasil"
+            android:textColor="@color/textPopupEditTextColor"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

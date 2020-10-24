@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Money Divider App</string>
+    <string name="orang1">Masukkan jumlah bayar orang ke-1:</string>
+    <string name="orang2">Masukkan jumlah bayar orang ke-2:</string>
+    <string name="hitung">Hitung</string>
+    <string name="jumlah1Lebih">Orang 1 membayar orang 2 sejumlah:</string>
+    <string name="jumlah2Lebih">Orang 2 membayar orang 1 sejumlah:</string>
+    <string name="jumlahSama">Keduanya sama jumlah bayarnya</string>
+    <string name="hasil">Hasil akan ditampilkan di sini</string>
+</resources>
